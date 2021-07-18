@@ -4,6 +4,7 @@ import React, { memo } from 'react';
 import Box from 'ui-box';
 import theme from '../../../../styles/theme';
 import { PanelHdrTempo } from './PanelHdrTempo';
+import { PanelHdrTimeSignature } from './PanelHdrTimeSignature';
 
 interface Props {}
 
@@ -20,6 +21,7 @@ function HeaderPanel(props) {
         justifyContent: 'flex-start',
         marginLeft: `${theme.space.lg}`,
         padding: `${theme.space.none}`,
+        marginRight: `${theme.space.lg}`,
       }}
       {...props}
     />
@@ -50,7 +52,9 @@ export const ToolbarHeader = memo((props: Props) => {
         <PanelHdrTempo />
       </HeaderPanel>
 
-      <HeaderPanel></HeaderPanel>
+      <HeaderPanel margin-left="42px">
+        <PanelHdrTimeSignature />
+      </HeaderPanel>
     </Box>
   );
 });

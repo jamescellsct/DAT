@@ -15,24 +15,41 @@ import { GlobalStyle } from 'styles/global-styles';
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/organisms/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import { PagePreLoader } from './components/atoms/PagePreLoader';
 
 export function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000);
+  }, []);
+
   const { i18n } = useTranslation();
   return (
-    <BrowserRouter>
-      <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
-        htmlAttributes={{ lang: i18n.language }}
-      >
-        <meta name="description" content="A React Boilerplate application" />
-      </Helmet>
+    <>
+      {!loading ? (
+        <BrowserRouter>
+          <Helmet
+            titleTemplate="%s - React Boilerplate"
+            defaultTitle="React Boilerplate"
+            htmlAttributes={{ lang: i18n.language }}
+          >
+            <meta
+              name="description"
+              content="A React Boilerplate application"
+            />
+          </Helmet>
 
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route component={NotFoundPage} />
+          </Switch>
+          <GlobalStyle />
+        </BrowserRouter>
+      ) : (
+        <PagePreLoader />
+      )}
+    </>
   );
 }

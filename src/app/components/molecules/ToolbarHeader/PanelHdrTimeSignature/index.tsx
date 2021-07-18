@@ -4,9 +4,6 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import theme from '../../../../../styles/theme';
 import Box from 'ui-box';
-import { Image } from 'theme-ui';
-import NudgeDown from './Nudge_Down.svg';
-import NudgeUp from './Nudge_Up.png';
 
 interface Props {}
 
@@ -47,7 +44,7 @@ export const PanelHdrTimeSignature = memo((props: Props) => {
           }}
           {...props}
         >
-          TEMPO
+          SIGNATURE
         </Box>
       </Box>
       <Box
@@ -71,7 +68,7 @@ export const PanelHdrTimeSignature = memo((props: Props) => {
           }}
           {...props}
         >
-          LINK
+          F#
         </Box>
         <Box
           is="span"
@@ -83,7 +80,7 @@ export const PanelHdrTimeSignature = memo((props: Props) => {
           }}
           {...props}
         >
-          TAP
+          MIN
         </Box>
         <Box
           is="span"
@@ -95,7 +92,7 @@ export const PanelHdrTimeSignature = memo((props: Props) => {
           }}
           {...props}
         >
-          128.00
+          4/4
         </Box>
         <Box
           is="span"
@@ -107,19 +104,7 @@ export const PanelHdrTimeSignature = memo((props: Props) => {
           }}
           {...props}
         >
-          <Image src={NudgeDown} variant="headerPanel" />
-        </Box>
-        <Box
-          is="span"
-          sx={{
-            display: 'flex',
-            fontSize: '12px',
-            marginLeft: `${theme.space.md}`,
-            cursor: 'pointer',
-          }}
-          {...props}
-        >
-          <Image src={NudgeUp} variant="headerPanel" />
+          1 BAR
         </Box>
       </Box>
     </Box>
