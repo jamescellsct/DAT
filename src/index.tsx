@@ -15,6 +15,9 @@ import { Provider } from 'react-redux';
 // Use consistent styling
 import 'sanitize.css/sanitize.css';
 
+import * as Sentry from '@sentry/react';
+import { Integrations } from '@sentry/tracing';
+
 // Import root app
 import { App } from 'app';
 
@@ -28,6 +31,16 @@ import reportWebVitals from 'reportWebVitals';
 
 // Initialize languages
 import './locales/i18n';
+
+Sentry.init({
+  dsn: 'https://e38a6f02b4a5438e866d7ba34f3e9fd4@o312779.ingest.sentry.io/5870127',
+  integrations: [new Integrations.BrowserTracing()],
+
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for performance monitoring.
+  // We recommend adjusting this value in production
+  tracesSampleRate: 1.0,
+});
 
 const store = configureAppStore();
 const MOUNT_NODE = document.getElementById('root') as HTMLElement;

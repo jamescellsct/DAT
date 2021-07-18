@@ -6,6 +6,8 @@
     "@fontsource/ubuntu": "4.5.0",
     "@nick-thompson/elementary": "0.2.2",
     "@reduxjs/toolkit": "1.6.0",
+    "@sentry/react": "6.9.0",
+    "@sentry/tracing": "6.9.0",
     "@storybook/addon-docs": "6.3.4",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.0.0",
