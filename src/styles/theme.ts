@@ -102,6 +102,11 @@ export default {
       maxWidth: '100%',
     },
   },
+  images: {
+    headerPanel: {
+      height: 14,
+    },
+  },
   buttons: {
     primary: {
       color: 'primaryText',
