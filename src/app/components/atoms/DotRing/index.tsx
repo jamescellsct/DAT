@@ -4,7 +4,6 @@
  *
  */
 import React, { memo, useContext } from 'react';
-import styled from 'styled-components/macro';
 import useMousePosition from '../../../../hooks/useMousePosition';
 import { MouseContext } from '../../../../context/mouse-context';
 import './styles.css';

@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #353535;
   }
 
+  * {
+    cursor: none;
+  }
+
   #root {
     min-height: 100%;
     min-width: 100%;

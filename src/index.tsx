@@ -31,6 +31,7 @@ import reportWebVitals from 'reportWebVitals';
 
 // Initialize languages
 import './locales/i18n';
+import MouseContextProvider from './context/mouse-context';
 
 Sentry.init({
   dsn: 'https://e38a6f02b4a5438e866d7ba34f3e9fd4@o312779.ingest.sentry.io/5870127',
@@ -50,7 +51,9 @@ ReactDOM.render(
     <HelmetProvider>
       <React.StrictMode>
         <ThemeProvider theme={theme}>
-          <App />
+          <MouseContextProvider>
+            <App />
+          </MouseContextProvider>
         </ThemeProvider>
       </React.StrictMode>
     </HelmetProvider>
