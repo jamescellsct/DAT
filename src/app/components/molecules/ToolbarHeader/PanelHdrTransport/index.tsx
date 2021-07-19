@@ -11,12 +11,16 @@ import RecordIcon from './record.svg';
 import OverdubIcon from './overdub.svg';
 import LoopIcon from './loop.svg';
 import StopIcon from './Stop.svg';
+import withCursor from '../../../../hocs/withCursor';
 
-interface Props {}
+interface Props {
+  context: any;
+}
 
-export const PanelHdrTransport = memo((props: Props) => {
+export const PanelHdrTransport = withCursor((props: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
+  const { onCursor } = props.context;
 
   return (
     <Box
@@ -99,7 +103,13 @@ export const PanelHdrTransport = memo((props: Props) => {
           }}
           {...props}
         >
-          <Image src={PlayIcon} variant="headerPanel" />
+          <Image
+            src={PlayIcon}
+            variant="headerPanel"
+            onMouseEnter={() => onCursor('pointer')}
+            onMouseLeave={onCursor}
+            {...props}
+          />
         </Box>
         <Box
           is="span"

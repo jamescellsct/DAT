@@ -39,6 +39,9 @@ export const GlobalStyle = createGlobalStyle`
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: background 0.5s;
+    img {
+
+    }
   }
 
   .movable.active {
