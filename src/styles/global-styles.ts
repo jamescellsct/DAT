@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import '@fontsource/ubuntu';
-import CursorDefault from './assets/cursors/cursor-default.svg';
 
 export const GlobalStyle = createGlobalStyle`
   html,
