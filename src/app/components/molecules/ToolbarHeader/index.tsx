@@ -5,6 +5,8 @@ import Box from 'ui-box';
 import theme from '../../../../styles/theme';
 import { PanelHdrTempo } from './PanelHdrTempo';
 import { PanelHdrTimeSignature } from './PanelHdrTimeSignature';
+import { PanelHdrTransport } from './PanelHdrTransport';
+import { PanelHdrEnvelopes } from './PanelHdrEnvelopes';
 
 interface Props {}
 
@@ -54,6 +56,14 @@ export const ToolbarHeader = memo((props: Props) => {
 
       <HeaderPanel margin-left="42px">
         <PanelHdrTimeSignature />
+      </HeaderPanel>
+
+      <HeaderPanel margin-left="42px">
+        <PanelHdrTransport />
+      </HeaderPanel>
+
+      <HeaderPanel margin-left="42px">
+        <PanelHdrEnvelopes />
       </HeaderPanel>
     </Box>
   );
