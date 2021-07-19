@@ -21,7 +21,6 @@ export const GlobalStyle = createGlobalStyle`
   * {
     cursor: pointer;
   }
-
   #root {
     min-height: 100%;
     min-width: 100%;
