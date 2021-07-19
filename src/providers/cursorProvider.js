@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
-import CursorDefault from './cursors/cursor-default.svg';
 export const CursorContext = React.createContext('cursorContext');
 
 const SUPPORTED_CURSORS = [false, 'pointer', 'right', 'left'];

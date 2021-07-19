@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 
-import React, { memo } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import theme from '../../../../../styles/theme';
 import Box from 'ui-box';
